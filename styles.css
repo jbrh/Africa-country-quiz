@@ -1,0 +1,57 @@
+body {
+        background-color: #c9953c;
+        background-image: url(http://www.transparenttextures.com/patterns/squairy.png);
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    }
+
+#littleimages { 
+         width: 370px;
+         float: right;  
+         z-index: 30;
+}
+
+.sweet-alert{
+        background-color: #BCF1ED;
+        width: 350px;
+        margin-left: -150px;
+        /*height: 100px;*/
+}
+
+.sweet-alert h2 {
+        color: #0198E1;
+}
+
+#counterCorrect{
+        font-size:20px;
+        width:28px;
+        height:27px;
+        padding-top:4px;
+        padding-left:5px;
+        margin-right:10px;
+        background-color:green;
+        float:left;
+}
+
+#wordCorrect {
+        border:0px;
+        padding-top:0px;
+        margin-right:40px;
+        float:left;
+}
+
+#counterWrong{
+        font-size:20px;
+        width:28px;
+        height:27px;
+        padding-top:4px;
+        padding-left:5px;
+        margin-right:10px;
+        background-color:red;
+        float:left;
+}
+
+#wordWrong {
+        border:0px;
+        padding-top:0px;
+        float:left;
+}
