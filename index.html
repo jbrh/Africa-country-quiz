@@ -2,35 +2,26 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title> Africa drag n' drop</title>
+  <title> Africa drag play </title>
 
-  <style>
+  
 
-    div#littleimages { 
-         width: 350px;
-         float: right;  
-         z-index: 30;
-    }
-    
-    </style>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.css"> 
+
+  <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.min.js"></script> 
   
   <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.1.js'></script>
 
-  
-    
-  <script type='text/javascript' src="http://www.outsharked.com/scripts/dev/jquery.imagemapster.1.2.4.040.js"></script>
-    
-  
+  <script type='text/javascript' src="scripts/jquery.imagemapster.1.2.4.040.js"></script>
     
   <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
 
-  
-
-
 <script type='text/javascript'>
 
-window.correct = []
-window.countryname = []
+window.correct = [];
+window.countryname = [];
 
 $(window).load(function(){
 $(document).ready(function() {
@@ -88,6 +79,7 @@ $(document).ready(function() {
     window.countryname[48] = $('#westernsahara');
     window.countryname[49] = $('#gabon');
     /* JQuery uses # to select an element by ID*/
+
     img.mapster({
         mapKey: 'name',
         fade: false,
@@ -108,7 +100,7 @@ $(document).ready(function() {
     for (i = 0; i < 50; i++){
         window.countryname[i].css('z-index', 5).draggable({
             drag: function() {
-                $(this).css('z-index', 5)
+                $(this).css('z-index', 5);
             }
         });
     }
@@ -124,7 +116,7 @@ $(document).ready(function() {
             temp = ui.draggable.attr('id') + 'map'
             if (temp == landing) {
                 // correct choice then push this country into the correct-choices array
-                window.correct.push(landing)
+                window.correct.push(landing);
                 // tell them so
                 //alert("You are correct!!!");
                 // select it as red
@@ -140,14 +132,44 @@ $(document).ready(function() {
                         // set the country to not-colored
                         img.mapster('set', false, keyname)
                     }
+
                     
                 }
-                img.mapster('snapshot')     
+                img.mapster('snapshot');  
                 $(ui.draggable).css('z-index', 5).draggable({ cancel: ".special" }); 
+
+                $( this )
+                        .addClass( "ui-state-highlight" )
+                        .find( "p" );
+                    $('#counterCorrect').html(function(i, val) {
+                     return val * 1 + 1;
+                    });
                 //ui.draggable.attr('id').
+                swal({   
+                    title: "Yay! You are correct :)", 
+                    imageUrl: "http://www.animateit.net/data/media/192/acc004.gif", 
+                    timer: 2000,   
+                    showConfirmButton: false });
             }  
             else if (landing) {
-                //alert("Please try again");
+                for (i = 0; i < window.countryname.length; i++){
+                $( this )
+                        .addClass( "ui-state-highlight" )
+                        .find( "p" );
+                    $('#counterWrong').html(function(i, val) {
+                      x = +val+.02
+                      return Math.round (x *1000)/1000
+                      /*why does this work?  without this it returned a 16 place decimal -- from http://www.jacklmoore.com/notes/rounding-in-javascript/*/
+                    });
+                }
+                swal({   
+                    title: "Nope, please try again :)",
+                    imageUrl: "http://www.animateit.net/data/media/192/acc012.gif",  
+                    timer: 2000,   
+                    showConfirmButton: false });
+                /*http://t4t5.github.io/sweetalert/*/
+                
+                
             }
 
         }
@@ -164,8 +186,7 @@ $(document).ready(function() {
 <div style="float:left;font-size:24px;height:60px;">
     <div style="top: 10px;float:left"><p><h1>Drag and Drop African Countries Game</h1></p></div>
 <br></br>
-<br>
-<br>
+<br><br>
 
     <img id="africa" src="images/africa.jpg" usemap="#africa" style="z-index:0;opacity:0.8" /></div>
 
@@ -177,10 +198,19 @@ $(document).ready(function() {
 
 
     <p><h3>Drag each country name to where you believe it belongs on the map to the left.  "Drop" the country name by letting go of the cursor -- if your selection is wrong, the light red highlight will disappear and you may continue to move the country name.  If your selection is correct, the highlight will turn to a darker red and the country name will remain fixed in position.  If you accidently click on a country, just click again and its color will go back to white. See if you can correctly place the 49 African countries!</h3></p>
-    <br></br>
-    <br></br>
     <br>
+<div id="counterCorrect">
+</div>
+<div id="wordCorrect"><p>Correct</p>
+</div>
 
+<div id="counterWrong">
+</div>
+<div id="wordWrong"><p>Incorrect</p>
+</div>
+
+<br></br>
+<br>
 <p><img src="images/algeria.png" id="algeria" style="z-index: 5;"><img src="images/angola.png" id="angola" style="z-index: 5;"><img src="images/benin.png" id="benin" style="z-index: 5;"><mg src="images/morocco.png" id="morocco" style="z-index: 5;"><img src="images/botswana.png" id="botswana" style="z-index: 5;"></p>
 
 <p><img src="images/burkinafaso.png" id="burkinafaso" style="z-index: 5;"><img src="images/burundi.png" id="burundi" style="z-index: 5;"><img src="images/car.png" id="car" style="z-index: 5;"><img src="images/cameroon.png" id="cameroon" style="z-index: 5;"></p>
@@ -203,8 +233,9 @@ $(document).ready(function() {
 
 <p><img src="images/uganda.png" id="uganda" style="z-index: 5;"><img src="images/westernsahara.png" id="westernsahara" style="z-index: 5;"><img src="images/zambia.png" id="zambia" style="z-index: 5;"><img src="images/zimbabwe.png" id="zimbabwe" style="z-index: 5;"></p>
 
+
 <br></br>
-<br></br>
+<br>
 
     <img src="images/smallpanafricanflag.png" style="z-index: 1000;">
     <p> Pan African flag inspired the colors of this page!</p>
@@ -281,7 +312,7 @@ $(document).ready(function() {
 <p style="font-size:small; color:gray; text-align:center;">
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Africa Drag and Drop Countries Game</span> by <a xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName" rel="cc:attributionURL">Jenny Hoffman and Dr. Timothy Jones</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
 <br></br>
-This software incorporates ImageMapster and JQuery Google API.</p></p>
+This software incorporates ImageMapster, JQuery and Sweet Alert.</p></p>
 </div>
 
 
