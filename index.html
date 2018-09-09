@@ -14,9 +14,11 @@
   
   <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.1.js'></script>
 
+
   <script type='text/javascript' src="scripts/jquery.imagemapster.1.2.4.040.js"></script>
     
   <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
 
 <script type='text/javascript'>
 
@@ -136,7 +138,7 @@ $(document).ready(function() {
                     
                 }
                 img.mapster('snapshot');  
-                $(ui.draggable).css('z-index', 5).draggable({ cancel: ".special" }); 
+                $(ui.draggable).css('z-index', 0).draggable({ cancel: ".special" }); 
 
                 $( this )
                         .addClass( "ui-state-highlight" )
@@ -146,7 +148,7 @@ $(document).ready(function() {
                     });
                 //ui.draggable.attr('id').
                 swal({   
-                    title: "Yay! You are correct :)", 
+                    title: "Yay! You are correct!", 
                     imageUrl: "http://www.animateit.net/data/media/192/acc004.gif", 
                     timer: 2000,   
                     showConfirmButton: false });
@@ -163,7 +165,7 @@ $(document).ready(function() {
                     });
                 }
                 swal({   
-                    title: "Nope, please try again :)",
+                    title: "Nope, please try again...",
                     imageUrl: "http://www.animateit.net/data/media/192/acc012.gif",  
                     timer: 2000,   
                     showConfirmButton: false });
@@ -183,8 +185,8 @@ $(document).ready(function() {
 
 </head>
 <body>
-<div style="float:left;font-size:24px;height:60px;">
-    <div style="top: 10px;float:left"><p><h1>Drag and Drop African Countries Game</h1></p></div>
+<div style="text-align:center;font-size:24px;height:60px;">
+    <div style="top: 10px;float:left"><p><h1>Do You Know Africa?</h1></p></div>
 <br></br>
 <br><br>
 
