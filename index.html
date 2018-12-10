@@ -185,59 +185,52 @@ $(document).ready(function() {
 
 </head>
 <body>
-<div style="text-align:center;font-size:24px;height:60px;">
+<div id="maincontainer">
     <div style="top: 10px;float:left"><p><h1>Do You Know Africa?</h1></p></div>
-<br></br>
-<br><br>
+    <br></br>
+    <br><br>
 
-    <img id="africa" src="images/africa.jpg" usemap="#africa" style="z-index:0;opacity:0.8" /></div>
+    <img id="africa" src="images/africa.jpg" usemap="#africa" style="z-index:0;opacity:0.8" />
+</div>
 
 <div id="littleimages">
     <br></br>
-    
-    <br></br>
-    <br></br>
-
 
     <p><h3>Drag each country name to where you believe it belongs on the map to the left.  "Drop" the country name by letting go of the cursor -- if your selection is wrong, the light red highlight will disappear and you may continue to move the country name.  If your selection is correct, the highlight will turn to a darker red and the country name will remain fixed in position.  If you accidently click on a country, just click again and its color will go back to white. See if you can correctly place the 49 African countries!</h3></p>
     <br>
-<div id="counterCorrect">
-</div>
-<div id="wordCorrect"><p>Correct</p>
-</div>
+    <div id="counterCorrect"></div>
+    <div id="wordCorrect"><p>Correct</p></div>
 
-<div id="counterWrong">
-</div>
-<div id="wordWrong"><p>Incorrect</p>
-</div>
+    <div id="counterWrong"></div>
+    <div id="wordWrong"><p>Incorrect</p></div>
 
-<br></br>
-<br>
-<p><img src="images/algeria.png" id="algeria" style="z-index: 5;"><img src="images/angola.png" id="angola" style="z-index: 5;"><img src="images/benin.png" id="benin" style="z-index: 5;"><mg src="images/morocco.png" id="morocco" style="z-index: 5;"><img src="images/botswana.png" id="botswana" style="z-index: 5;"></p>
+    <br></br>
+    <br>
+    <p><img src="images/algeria.png" id="algeria" style="z-index: 5;"><img src="images/angola.png" id="angola" style="z-index: 5;"><img src="images/benin.png" id="benin" style="z-index: 5;"><mg src="images/morocco.png" id="morocco" style="z-index: 5;"><img src="images/botswana.png" id="botswana" style="z-index: 5;"></p>
 
-<p><img src="images/burkinafaso.png" id="burkinafaso" style="z-index: 5;"><img src="images/burundi.png" id="burundi" style="z-index: 5;"><img src="images/car.png" id="car" style="z-index: 5;"><img src="images/cameroon.png" id="cameroon" style="z-index: 5;"></p>
+    <p><img src="images/burkinafaso.png" id="burkinafaso" style="z-index: 5;"><img src="images/burundi.png" id="burundi" style="z-index: 5;"><img src="images/car.png" id="car" style="z-index: 5;"><img src="images/cameroon.png" id="cameroon" style="z-index: 5;"></p>
 
-<p><img src="images/chad.png" id="chad" style="z-index: 5;"><img src="images/congo.png" id="congo" style="z-index: 5;"><img src="images/drc.png" id="drc" style="z-index: 5;"><img src="images/dijibouti.png" id="dijibouti" style="z-index: 5;"><img src="images/egypt.png" id="egypt" style="z-index: 5;"></p>
+    <p><img src="images/chad.png" id="chad" style="z-index: 5;"><img src="images/congo.png" id="congo" style="z-index: 5;"><img src="images/drc.png" id="drc" style="z-index: 5;"><img src="images/dijibouti.png" id="dijibouti" style="z-index: 5;"><img src="images/egypt.png" id="egypt" style="z-index: 5;"></p>
 
-<p><img src="images/equiguinea.png" id="equiguinea" style="z-index: 5;"><img src="images/eritrea.png" id="eritrea" style="z-index: 5;"><img src="images/ethiopia.png" id="ethiopia" style="z-index: 5;"><img src="images/gabon.png" id="gabon" style="z-index: 5;"><img src="images/gambia.png" id="gambia" style="z-index: 5;"></p>
+    <p><img src="images/equiguinea.png" id="equiguinea" style="z-index: 5;"><img src="images/eritrea.png" id="eritrea" style="z-index: 5;"><img src="images/ethiopia.png" id="ethiopia" style="z-index: 5;"><img src="images/gabon.png" id="gabon" style="z-index: 5;"><img src="images/gambia.png" id="gambia" style="z-index: 5;"></p>
 
-<p><img src="images/ghana.png" id="ghana" style="z-index: 5;"><img src="images/guinea.png" id="guinea" style="z-index: 5;"><img src="images/guineabissau.png" id="guineabissau" style="z-index: 5;"><img src="images/ivorycoast.png" id="ivorycoast" style="z-index: 5;"></p>
+    <p><img src="images/ghana.png" id="ghana" style="z-index: 5;"><img src="images/guinea.png" id="guinea" style="z-index: 5;"><img src="images/guineabissau.png" id="guineabissau" style="z-index: 5;"><img src="images/ivorycoast.png" id="ivorycoast" style="z-index: 5;"></p>
 
-<p><img src="images/kenya.png" id="kenya" style="z-index: 5;"><img src="images/lesotho.png" id="lesotho" style="z-index: 5;"><img src="images/liberia.png" id="liberia" style="z-index: 5;"><img src="images/libya.png" id="libya" style="z-index: 5;"><img src="images/madagascar.png" id="madagascar" style="z-index: 5;"></p>
+    <p><img src="images/kenya.png" id="kenya" style="z-index: 5;"><img src="images/lesotho.png" id="lesotho" style="z-index: 5;"><img src="images/liberia.png" id="liberia" style="z-index: 5;"><img src="images/libya.png" id="libya" style="z-index: 5;"><img src="images/madagascar.png" id="madagascar" style="z-index: 5;"></p>
 
-<p><img src="images/malawi.png" id="malawi" style="z-index: 5;"><img src="images/mali.png" id="mali" style="z-index: 5;"><img src="images/mauritania.png" id="mauritania" style="z-index: 5;"><img src="images/morocco1.png" id="morocco1" style="z-index: 5;"></p>
+    <p><img src="images/malawi.png" id="malawi" style="z-index: 5;"><img src="images/mali.png" id="mali" style="z-index: 5;"><img src="images/mauritania.png" id="mauritania" style="z-index: 5;"><img src="images/morocco1.png" id="morocco1" style="z-index: 5;"></p>
 
-<p><img src="images/mozambique.png" id="mozambique" style="z-index: 5;"><img src="images/namibia.png" id="namibia" style="z-index: 5;"><img src="images/niger.png" id="niger" style="z-index: 5;"><img src="images/nigeria.png" id="nigeria" style="z-index: 5;"><img src="images/rwanda.png" id="rwanda" style="z-index: 5;"></p>
+    <p><img src="images/mozambique.png" id="mozambique" style="z-index: 5;"><img src="images/namibia.png" id="namibia" style="z-index: 5;"><img src="images/niger.png" id="niger" style="z-index: 5;"><img src="images/nigeria.png" id="nigeria" style="z-index: 5;"><img src="images/rwanda.png" id="rwanda" style="z-index: 5;"></p>
 
-<p><img src="images/senegal.png" id="senegal" style="z-index: 5;"><img src="images/sierraleone.png" id="sierraleone" style="z-index: 5;"><img src="images/somalia.png" id="somalia" style="z-index: 5;"><img src="images/southafrica.png" id="southafrica" style="z-index: 5;"></p>
+    <p><img src="images/senegal.png" id="senegal" style="z-index: 5;"><img src="images/sierraleone.png" id="sierraleone" style="z-index: 5;"><img src="images/somalia.png" id="somalia" style="z-index: 5;"><img src="images/southafrica.png" id="southafrica" style="z-index: 5;"></p>
 
-<p><img src="images/sudan.png" id="sudan" style="z-index: 5;"><img src="images/swaziland.png" id="swaziland" style="z-index: 5;"><img src="images/tanzania.png" id="tanzania" style="z-index: 5;"><img src="images/togo.png" id="togo" style="z-index: 5;"><img src="images/tunisia.png" id="tunisia" style="z-index: 5;"></p>
+    <p><img src="images/sudan.png" id="sudan" style="z-index: 5;"><img src="images/swaziland.png" id="swaziland" style="z-index: 5;"><img src="images/tanzania.png" id="tanzania" style="z-index: 5;"><img src="images/togo.png" id="togo" style="z-index: 5;"><img src="images/tunisia.png" id="tunisia" style="z-index: 5;"></p>
 
-<p><img src="images/uganda.png" id="uganda" style="z-index: 5;"><img src="images/westernsahara.png" id="westernsahara" style="z-index: 5;"><img src="images/zambia.png" id="zambia" style="z-index: 5;"><img src="images/zimbabwe.png" id="zimbabwe" style="z-index: 5;"></p>
+    <p><img src="images/uganda.png" id="uganda" style="z-index: 5;"><img src="images/westernsahara.png" id="westernsahara" style="z-index: 5;"><img src="images/zambia.png" id="zambia" style="z-index: 5;"><img src="images/zimbabwe.png" id="zimbabwe" style="z-index: 5;"></p>
 
 
-<br></br>
-<br>
+    <br></br>
+    <br>
 
     <img src="images/smallpanafricanflag.png" style="z-index: 1000;">
     <p> Pan African flag inspired the colors of this page!</p>
@@ -300,9 +293,6 @@ $(document).ready(function() {
      <area shape="poly" name="tanzaniamap" coords="613, 753, 611, 746, 609, 737, 604, 734, 590, 730, 577, 725, 570, 720, 567, 709, 566, 702, 557, 693, 558, 688, 554, 676, 564, 672, 567, 664, 567, 658, 567, 653, 570, 647, 564, 636, 577, 635, 577, 642, 578, 650, 583, 650, 593, 651, 603, 651, 599, 646, 603, 641, 607, 633, 641, 655, 646, 661, 664, 671, 661, 680, 659, 688, 661, 699, 667, 704, 664, 716, 664, 727, 669, 734, 676, 743, 669, 749, 657, 752, 652, 751, 645, 755, 637, 756, 630, 756, 623, 755" href="#" />
 </map>
 
-<script type="text/javascript">
-
-</script>
   
 </body>
 <br></br>

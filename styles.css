@@ -4,9 +4,15 @@ body {
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
     }
 
+#maincontainer {
+        text-align:center;
+        font-size:24px;
+        height: 60px;
+}
+
 #littleimages { 
          width: 340px;
-         float: right;  
+         margin-left: 920px; 
          z-index: 30;
 }
 
